@@ -1,4 +1,4 @@
 # PseInt-Ejercicios
-Ejercicios de PseInt
+Suma de dos números.
 
-![alt text](https://github.com/SanchezRCamilo/PseInt-Ejercicios/blob/main/sumadosnumeros/sumaDosNumeros.png)
+![Diagrama de flujo](https://github.com/SanchezRCamilo/PseInt-Ejercicios/blob/main/sumadosnumeros/sumaDosNumeros.png)
