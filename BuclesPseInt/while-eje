@@ -1,0 +1,13 @@
+Algoritmo condición_while
+	//Definir variables
+	Definir control Como Entero;
+	//condicion
+	Mientras control<>3 Hacer
+		//condicion falsa
+		Escribir "Menu";
+		Escribir "1.Vender.";
+		Escribir "2.Total venta.";
+		Escribir "3.Salir del programa.";
+		Leer control;
+	Fin Mientras
+FinAlgoritmo
