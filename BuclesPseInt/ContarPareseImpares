@@ -1,4 +1,4 @@
-Proceso ContarParesEImpares
+Algoritmo ContarParesEImpares
     Definir num, contadorPares, contadorImpares Como Entero
     contadorPares <- 0
     contadorImpares <- 0
@@ -13,4 +13,5 @@ Proceso ContarParesEImpares
     FinPara
     Escribir "Cantidad de números pares: ", contadorPares
     Escribir "Cantidad de números impares: ", contadorImpares
-FinProceso
+FinAlgoritmo
+
