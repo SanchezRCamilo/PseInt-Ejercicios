@@ -1,0 +1,28 @@
+Algoritmo sin_titulo
+	definir vector1 Como Entero;
+	Definir n, i, temp, numero como Entero
+	
+    Escribir "Ingrese el valor de n:"
+    Leer n
+	Dimension vector1[n];
+    Para i = 1 Hasta n Con Paso 1 Hacer
+        numero = Aleatorio(1,100);
+        vector1[i] = numero
+    FinPara
+	
+    Escribir "Arreglo original:"
+    Para i = 1 Hasta n Con Paso 1 Hacer
+        Escribir vector1[i]
+    FinPara
+	
+    Para i = 1 Hasta n / 2 Con Paso 1 Hacer
+        temp = vector1[i]
+        vector1[i] = vector1[n - i + 1];
+        vector1[n - i + 1] = temp;
+    FinPara
+	
+    Escribir "Arreglo invertido:"
+    Para i = 1 Hasta n Con Paso 1 Hacer
+        Escribir vector1[i]
+    FinPara
+FinAlgoritmo
