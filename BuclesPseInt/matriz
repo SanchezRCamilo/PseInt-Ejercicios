@@ -1,0 +1,78 @@
+Algoritmo trabajoenclase
+		definir matriz Como Entero
+		definir suma, maximo, contadorMaximo, sumaDiagonales, sumaUltimaFila Como Entero
+		definir i, j, contadorPrimos, contadorPares Como Entero
+		suma <- 0
+		maximo <- -99999
+		contadorMaximo <- 0
+		sumaDiagonales <- 0
+		sumaUltimaFila <- 0
+		Dimension matriz[6,6];
+		suma <- 0
+		maximo <- -99999
+		contadorMaximo <- 0
+		sumaDiagonales <- 0
+		sumaUltimaFila <- 0
+		
+		Para i <- 1 Hasta 6 Hacer
+			Para j <- 1 Hasta 6 Hacer
+				matriz[i,j] <- Azar(100) + 1
+				suma <- suma + matriz[i,j]
+				
+				Si matriz[i,j] > maximo Entonces
+					maximo <- matriz[i,j]
+					contadorMaximo <- 1
+				Sino
+					Si matriz[i,j] = maximo Entonces
+					contadorMaximo <- contadorMaximo + 1
+				FinSi
+			FinSi
+			
+			FinPara
+		FinPara
+		
+		promedio <- suma / 36
+		Escribir "Promedio de la matriz: ", promedio
+		Escribir "Número mayor: ", maximo, " y se repite ", contadorMaximo, " veces"
+		
+		Escribir "Números primos:"
+		Para i <- 1 Hasta 6 Hacer
+			Para j <- 1 Hasta 6 Hacer
+				esPrimo <- Verdadero
+				Si matriz[i,j] < 2 Entonces
+					esPrimo <- Falso
+				FinSi
+				Para k <- 2 Hasta matriz[i,j]-1 Hacer
+					Si matriz[i,j] % k = 0 Entonces
+						esPrimo <- Falso
+						
+					FinSi
+				FinPara
+				Si esPrimo Entonces
+					Escribir matriz[i,j]
+				FinSi
+			FinPara
+		FinPara
+		
+		Escribir "Números pares:"
+		Para i <- 1 Hasta 6 Hacer
+			Para j <- 1 Hasta 6 Hacer
+				Si matriz[i,j] % 2 = 0 Entonces
+					Escribir matriz[i,j]
+				FinSi
+			FinPara
+		FinPara
+		
+		Para i <- 1 Hasta 6 Hacer
+			sumaDiagonales <- sumaDiagonales + matriz[i,i] + matriz[i,7-i]
+		FinPara
+		sumaDiagonales <- sumaDiagonales - matriz[4,4]  // Ajustar suma doble del centro si es necesario
+		
+		Escribir "Suma de las diagonales: ", sumaDiagonales
+		
+		Para j <- 1 Hasta 6 Hacer
+			sumaUltimaFila <- sumaUltimaFila + matriz[6,j]
+		FinPara
+		
+		Escribir "Suma de la última fila: ", sumaUltimaFila
+FinAlgoritmo
